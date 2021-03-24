@@ -153,7 +153,7 @@ More information on loading the data with examples on how to use it, can be foun
 
 # Contact
 
-Feel free to contact me with any questions and remarks. Also about issues you run into and possible improvements. The usual works-on-my-machine-disclaimer: this code should run out of the box with just an Atlas connection string added, if not ping me and we'll dive into it. Of course I envourage everyone to adapt the code at their needs, change it to load real world data, and add more features! :-) 
+Feel free to contact me with any questions and remarks. Also about issues you run into and possible improvements. The usual works-on-my-machine-disclaimer: this code should run out of the box with just an Atlas connection string added, if not ping me and we'll dive into it. Of course I encourage everyone to adapt the code at their needs, change it to load real world data, and add more features! :-) 
 
 ```
 {
