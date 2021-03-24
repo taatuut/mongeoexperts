@@ -77,19 +77,19 @@ This returns 3 documents after the initial data load:
 
 3. 'Automate it'
 
-To create your own two continously running 'microservices' we will run the above Python scripts in the most simple automated way.
+To create your own two continously running 'microservices' we will kick-off the above Python scripts in the most simple automated way right from the command line in a terminal.
 
 * To load data continuously run the following command in a terminal, and make sure to replace the connection string with your own first:
-* 
+
 `while :; do echo $(date); python create_grid.py | mongoimport --uri mongodb+srv://<user>:<pass>@yourserver.at.mongodb.net/test --collection gridder --jsonArray; sleep 15; done`
 
-NOTE: this command does not use the `--drop` parameter so it keeps adding new documents to the `gridder` collection in the `test` database every 15 seconds as long as the command runs
+NOTE: this command does not use the `--drop` parameter anymore so it keeps adding new documents to the `gridder` collection in the `test` database every 15 seconds as long as the command runs
 
 * To query continuously run the following command in another terminal:
 
 `while :; do echo $(date); python query_grid.py; sleep 30; done`
 
-Note: you should already have added your own Atlas connection string for Python to the `query_grid.py` script in Step 2, and running this command returns a growing result set every 30 seconds (growing becasue more and more data is added over time) 
+Note: you should already have added your own Atlas connection string for Python to the `query_grid.py` script in Step 2, and running this command returns a growing result set every 30 seconds that matches the spatial filter (growing because more and more data is loaded over time) 
 
 <TODO: image VS with two terminals split>
 
@@ -101,3 +101,17 @@ You are done! You just set up an Atlas cluster in the cloud, and from the applic
 
 * Load the sample data
 * Use Compass to connect to Atlas, then explore the datasets, e.g. the shipwreck data <TODO: description schema analysis with map image, select, export code>
+
+# Contact
+
+```
+{
+  "name": "Emil Zegers",
+  "title": "Senior Solutions Architect",
+  "phone": "+31 6 19929703",
+  "email": "emil.zegers@mongodb.com",
+  "location": "Amsterdam, Netherlands",
+  "twitter": ["@emilzegers", "@mongodb"],
+  "linkedin": "https://www.linkedin.com/in/emilzegers"
+}
+```
