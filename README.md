@@ -40,4 +40,23 @@ Part 6: Insert and View Data in Your Cluster. To use the code from the presentat
 
 2. Configure and run the example application
 
+As a first test to see the output of the data creation, run the following command:
 
+`python create_grid.py`
+
+This prints unique 648 points in geojson format  
+
+Now run `python create_grid.py | mongoimport --uri mongodb+srv://<user>:<pass>@yourserver.at.mongodb.net/test --drop --collection gridder --jsonArray`
+
+This does a one time import of the data, deleting the collection if it already existed , and returns something like:
+
+```
+2021-03-24T02:12:20.493+0100    connected to: atlas-lzg21q-shard-0/yourserver-shard-00-00.at.mongodb.net:27017,yourserver-shard-00-01.at.mongodb.net:27017,yourserver-shard-00-02.at.mongodb.net:27017
+2021-03-24T02:12:20.567+0100    dropping: test.gridder
+2021-03-24T02:12:21.069+0100    imported 648 documents
+```
+
+# Extra
+
+* Load the sample data
+* Use Compass to connect to Atlas, then explore the datasets, e.g. the shipwreck data <TODO: description schema analysis with map image, select, export code>
