@@ -3,7 +3,7 @@ Ok, bit tongue in cheek, but MongoDB + GeoExperts = mongeoexperts right?
 
 This repository contains the code that I demoed during the `Expert Sessie` presentation for GeoExperts, GeoBIMExperts, Ruimteschepper, NieuwlandGEO on March 23rd 2021.
 
-You can clone/copy/use this code and play with it yourself to explore the two (2) available features:
+You can clone/copy/use this code and play with it yourself to explore the two (2!) available features:
 
 1. Load data into an MongoDB Atlas cluster
 2. Retrieve data using a spatial query
@@ -43,7 +43,7 @@ Part 6: Insert and View Data in Your Cluster. To use the code from the presentat
 
 ## Load data
 
-<TODO: add connection string>
+<TODO: describe how to use mongoimport and to add connection string>
 
 As a first test to see the output of the data creation, run the following command:
 
@@ -63,7 +63,7 @@ This does a one time import of the data, deleting the collection if it already e
 
 ## Query data
 
-<TODO: add connection string>
+<TODO: describe how to add Python connection string to the script>
 
 To see  the output for the spatial query run `python query_grid.py`
 
