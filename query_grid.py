@@ -1,7 +1,6 @@
 from pymongo import MongoClient
 
 # Examples:
-
 #client = MongoClient('mongodb://localhost:27017/test')
 #client = MongoClient("mongodb+srv://<user>:<pass>@yourserver.at.mongodb.net/myFirstDatabase?retryWrites=true&w=majority")
 
@@ -13,7 +12,7 @@ filter={
         '$geoWithin': {
             '$centerSphere': [
                 [
-                    9.73292112350464, 60.04167133076125
+                    9.732, 60.0416
                 ], 0.1
             ]
         }
