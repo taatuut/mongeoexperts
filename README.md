@@ -85,9 +85,17 @@ In the Atlas UI, go to [ Connect ] again, now click [ Connect your application ]
 
 ![image](https://user-images.githubusercontent.com/2260360/112278117-ca252080-8c82-11eb-823d-c8c3dbe2d56c.png)
 
-Copy the two lines you see at (2), and in the connection string replace `<user>:<pass>` with your own database user details. Click [ Close ]
+Copy the two lines you see at (2), it will look similar to this:
 
-Open `query_grid` and explore the code. It creates and uses a spatial filter to find points within a certain radius from a given point. Replace `YOUR_CONNECTION_STRING_HERE` with the connection string that you just copied and added your own user/pass info too. You can leave out the `PyMongo` part. Replace the line `db = client.somename` if you are using a different database name. 
+```
+client = pymongo.MongoClient("mongodb+srv://<username>:<password>@freetier.at.mongodb.net/myFirstDatabase?retryWrites=true&w=majority")
+db = client.test
+
+```
+
+In the connection string replace `<user>:<pass>` with your own database user details.
+
+Open `query_grid` and explore the code. It creates and uses a spatial filter to find points within a certain radius from a given point. Replace `YOUR_CONNECTION_STRING_HERE` with the connection string that you just copied and added your own user/pass info too. If you get the `NameError: name 'pymongo' is not defined` error, just delete `pymongo.` from line you copied. Replace the line `db = client.somename` if you are using a different database name. 
 
 ```
 # TODO: replace YOUR_CONNECTION_STRING_HERE with your own Atlas connection string for Python in the next line, and leave out the Pymongo prefix
@@ -132,6 +140,8 @@ Everything done! You just set up an Atlas cluster in the cloud, and from the app
 # Extra
 
 * Create a spatial index! We run this example without using an index. This works but if we would really have humungous loads of data an index will help to speed up queries. See https://docs.mongodb.com/manual/geospatial-queries/ for more info on geospatial queries and indexes.
+
+* Explore the Atlas UI, now data is loaded and queried you can browse the data and get statistics on it.
 
 * Load the sample data that comes with MongoDB Atlas. Go to your cluster in the Atlas UI and click [ Load Sample Dataset ] as in the image below
 
