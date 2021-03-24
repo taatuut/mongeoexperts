@@ -123,11 +123,12 @@ Note: you should already have added your own Atlas connection string for Python 
 
 4. Be happy
 
-You are done! You just set up an Atlas cluster in the cloud, and from the application code created a database with a collection holding data, with a spatial query returning the results your business needs. What more do you want to achieve in 60 minutes? Time for a cup of coffee and some fresh air.
+Everything done! You just set up an Atlas cluster in the cloud, and from the application code created a database with a collection holding data, using a spatial query returning the results your business needs to be successful! What more do you want to achieve in 60 minutes? Time for a cup of coffee and some fresh air.
 
 # Extra
 
-* Create a spatial index! We run this example without using an index. This works but if we would really have humungous loads of data an index will help to speed up queries.
+* Create a spatial index! We run this example without using an index. This works but if we would really have humungous loads of data an index will help to speed up queries. See https://docs.mongodb.com/manual/geospatial-queries/ for more info on geospatial queries and indexes.
+
 * Load the sample data that comes with MongoDB Atlas. Go to your cluster in the Atlas UI and click [ Load Sample Dataset ] as in the image below
 
 ![image](https://user-images.githubusercontent.com/2260360/112274883-487fc380-8c7f-11eb-9401-88a157bb1762.png)
