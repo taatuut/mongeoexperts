@@ -13,8 +13,9 @@ You can clone/copy/use this code and play with it yourself to explore the two (2
 * MongoDB Atlas account -> go to https://www.mongodb.com/cloud and click [ Try Free ] to register
 * Visual Studio Code, or your favorite Python editor and a command line terminal
 * MongoDB Database tools for your operating system. https://www.mongodb.com/try/download/database-tools NOTE: you could write the data loading part in Python only, but the tool fucntionality is nice to explore too.   
-* Python 3.7 or higher with pip installed, preferably the latest version of Python for your operating system 
+* Python 3.7 or higher with `pip` installed, preferably the latest version of Python for your operating system 
 * PyMongo driver, install running `python -m pip install pymongo[snappy,gssapi,srv,tls]` NOTE: this assumes that `python` calls your Python 3.x executable, depending on how you installed Python version(s), you might need to use `python3` or a full path
+* Module `dnspython`, install running `python -m pip install dnspython`
 
 ## Optional
 
