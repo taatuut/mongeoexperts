@@ -57,13 +57,17 @@ To get the connection string for your cluster, go to the Clusters overview in th
 
 ![image](https://user-images.githubusercontent.com/2260360/112276619-3d2d9780-8c81-11eb-85b3-63d86f6baea9.png)
 
-In the window that appears click [ Connect using MongoDB Compass ] as we can use this connection string for `mongoimport` too
+In the window that appears click [ Connect using MongoDB Compass ] as we can use this connection string for `mongoimport` too.
 
 ![image](https://user-images.githubusercontent.com/2260360/112277358-f7250380-8c81-11eb-8265-75228014f846.png)
 
-Copy the connection string you see at (2), and replace `<user>:<pass>` with your own database user details. Click [ Close ] or keep the window open to also get the Python connection string that you will use to query the data. It is of course connecting you to the same cluster, with a syntax directly usable in the Python code. 
+Copy the connection string you see at (2).
 
-Now run the following command using your own connection string
+![image](https://user-images.githubusercontent.com/2260360/112281063-effff480-8c85-11eb-82d2-6293bcbdac66.png)
+
+Replace `<user>:<pass>` with your own database user details. Click [ Close ] or keep the window open to also get the Python connection string that you will use to query the data. It is of course connecting you to the same cluster, with a syntax directly usable in the Python code. 
+
+Now run the following command using your own connection string:
 
 `python create_grid.py | mongoimport --uri mongodb+srv://<user>:<pass>@yourserver.at.mongodb.net/test --drop --collection gridder --jsonArray`
 
