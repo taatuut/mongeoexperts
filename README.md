@@ -79,6 +79,18 @@ This returns 3 documents after the initial data load:
 
 To create your own two continously running 'microservices' we will run the above Python scripts in the most simple automated way.
 
+* To load data continuously run the following command in a terminal, and make sure to replace the connection string with your own first:
+* 
+`while :; do echo $(date); python3 create_grid.py | mongoimport --uri mongodb+srv://<user>:<pass>@yourserver.at.mongodb.net/test --collection gridder --jsonArray; sleep 15; done`
+
+NOTE: this command does not use the `--drop` parameter so it keeps adding new documents to the `gridder` collection in the `test` database every 15 seconds as long as the command runs
+
+* To query continuously run the following command in another terminal:
+
+`while :; do echo $(date); python3 query_grid.py; sleep 30; done`
+
+Note: you should already have added your own Atlas connection string for Python to the `query_grid.py` script in Step 2, and running this command returns a growing result set every 30 seconds (growing becasue more and more data is added over time) 
+
 <TODO: image VS with two terminals split>
 
 4. Be happy
