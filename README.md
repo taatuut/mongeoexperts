@@ -57,8 +57,15 @@ To get the connection string for your cluster, go to the Clusters overview in th
 
 ![image](https://user-images.githubusercontent.com/2260360/112276619-3d2d9780-8c81-11eb-85b3-63d86f6baea9.png)
 
+In the window that appears click [ Connect using MongoDB Compass ] as we can use this connection string for `mongoimport` too
 
-Now run `python create_grid.py | mongoimport --uri mongodb+srv://<user>:<pass>@yourserver.at.mongodb.net/test --drop --collection gridder --jsonArray`
+![image](https://user-images.githubusercontent.com/2260360/112277358-f7250380-8c81-11eb-8265-75228014f846.png)
+
+Copy the connection string you see at (2), and replace `<user>:<pass>` with your own database user details. Click [ Close ] or keep the window open to also get the Python connection string that you will use to query the data. It is of course connecting you to the same cluster, with a syntax directly usable in the Python code. 
+
+Now run the following command using your own cinnection string
+
+`python create_grid.py | mongoimport --uri mongodb+srv://<user>:<pass>@yourserver.at.mongodb.net/test --drop --collection gridder --jsonArray`
 
 This does a one time import of the data, deleting the collection if it already existed , and returns something like:
 
@@ -70,9 +77,23 @@ This does a one time import of the data, deleting the collection if it already e
 
 ## Query data
 
-<TODO: describe how to add Python connection string to the script>
+In the Atlas UI, go to [ Connect ] again, now click [ Connect your application ]
 
-To see  the output for the spatial query run `python query_grid.py`
+![image](https://user-images.githubusercontent.com/2260360/112278117-ca252080-8c82-11eb-823d-c8c3dbe2d56c.png)
+
+Copy the two lines you see at (2), and in the connection string replace `<user>:<pass>` with your own database user details. Click [ Close ]
+
+Open `query_grid` and explore the code. It creates and uses a spatial filter to find points within a certain radius from a given point. Replace `YOUR_CONNECTION_STRING_HERE` with the connection string that you just copied and added your own user/pass info too. You can leave out the `PyMongo` part. Replace the line `db = client.somename` if you are using a different database name. 
+
+```
+# TODO: replace YOUR_CONNECTION_STRING_HERE with your own Atlas connection string for Python in the next line, and leave out the Pymongo prefix
+client = YOUR_CONNECTION_STRING_HERE
+db = client.test
+```
+
+Save your edits and run the following command to see the output for the spatial query:
+
+`python query_grid.py`
 
 This returns 3 documents after the initial data load:
 
