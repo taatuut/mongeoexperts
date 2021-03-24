@@ -24,13 +24,20 @@ You can clone/copy/use this code and play with it yourself to explore the two (2
 
 1. Get started with Atlas
 
-See https://docs.atlas.mongodb.com/getting-started/ for the manual. Execute the steps in the following parts
+See https://docs.atlas.mongodb.com/getting-started/ for the manual. Atlas Free Tier clusters provide a small-scale development environment to host your data. Free Tier clusters never expire. Execute the steps from part 1-6:
 
 Part 1: Create an Atlas Account. https://docs.atlas.mongodb.com/tutorial/create-atlas-account/ This is a one time registration
-Part 2: Deploy a Free Tier Cluster. https://docs.atlas.mongodb.com/tutorial/deploy-free-tier-cluster/ NOTE: Click [ Create a new cluster] and select the free M0 Sandbox Cluster Tier in the wizard
-Part 3: Add Your Connection IP Address to Your IP Access List. https://docs.atlas.mongodb.com/security/add-ip-address-to-list/ NOTE: for access to your cluster from any IP address, use 0.0.0.0/0 as mask)
-Part 4: Create a Database User for Your Cluster. https://docs.atlas.mongodb.com/tutorial/create-mongodb-user-for-cluster/ NOTE: This will be your Atlas admin user 
-Part 5: Connect to Your Cluster. https://docs.atlas.mongodb.com/tutorial/connect-to-your-cluster/ NOTE: you can copy the required connections strings 
-Part 6: Insert and View Data in Your Cluster.
 
-Atlas Free Tier clusters provide a small-scale development environment to host your data. Free Tier clusters never expire
+Part 2: Deploy a Free Tier Cluster. https://docs.atlas.mongodb.com/tutorial/deploy-free-tier-cluster/ NOTE: Click [ Create a new cluster] and select the free M0 Sandbox Cluster Tier in the wizard
+
+Part 3: Add Your Connection IP Address to Your IP Access List. https://docs.atlas.mongodb.com/security/add-ip-address-to-list/ NOTE: for access to your cluster from any IP address, use 0.0.0.0/0 as mask
+
+Part 4: Create a Database User for Your Cluster. https://docs.atlas.mongodb.com/tutorial/create-mongodb-user-for-cluster/ NOTE: This will be your Atlas admin user 
+
+Part 5: Connect to Your Cluster. https://docs.atlas.mongodb.com/tutorial/connect-to-your-cluster/ You can copy the required connections strings to use with `mongoimport` and the Python code directly from your cluster in Atlas
+
+Part 6: Insert and View Data in Your Cluster. To use the code from the presentation, add your connection strings to the two Python in this repository and run them. See Step 2. on how to do this. Alternatively you can look at the examples at https://docs.atlas.mongodb.com/tutorial/insert-data-into-your-cluster/   
+
+2. Configure and run the example application
+
+
