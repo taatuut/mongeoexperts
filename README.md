@@ -14,7 +14,7 @@ However, since these features run on a Atlas cluster you just created yourself w
 
 * MongoDB Atlas account -> go to https://www.mongodb.com/cloud and click [ Try Free ] to register
 * Visual Studio Code, or your favorite Python editor and a command line terminal
-* MongoDB Database Tools for your operating system. https://www.mongodb.com/try/download/database-tools NOTE: you could do the data loading part in Python only, but the database tools functionality is interesting to explore too. We'll only cover `mongoimport` here, but there are other tools for shell access to MongoDB, backup etc. See https://docs.mongodb.com/database-tools/ for more info
+* MongoDB Database Tools for your operating system. https://www.mongodb.com/try/download/database-tools NOTE: you could do the data loading part in Python only, but the database tools functionality is interesting to explore too. We'll only cover `mongoimport` here, but there are other tools for statistics on your MongoDB instance, data backup etc. See https://docs.mongodb.com/database-tools/ for more info
 * Python 3.7 or higher with `pip` installed, preferably the latest version of Python for your operating system 
 * PyMongo driver, install running `python -m pip install pymongo[snappy,gssapi,srv,tls]` NOTE: this assumes that `python` calls your Python 3.x executable, depending on how you installed Python version(s), you might need to use `python3` or a full path
 * Module `dnspython`, install running `python -m pip install dnspython`
@@ -104,8 +104,13 @@ You are done! You just set up an Atlas cluster in the cloud, and from the applic
 # Extra
 
 * Create a spatial index! We run this example without using an index. This works but if we would really have humungous loads of data an index will help to speed up queries.
-* Load the sample data
-* Use Compass to connect to Atlas, then explore the datasets, e.g. the shipwreck data <TODO: description schema analysis with map image, select, export code>
+* Load the sample data that comes with MongoDB Atlas. Go to your cluster in the Atlas UI and click [ Load Sample Dataset ] as in the image below
+
+![image](https://user-images.githubusercontent.com/2260360/112274883-487fc380-8c7f-11eb-9401-88a157bb1762.png)
+
+More information on loading the data with examples on how to use it, can be found at https://docs.atlas.mongodb.com/sample-data/ NOTE: the Atlas Free Tier comes with 512 MB storage space, the sample dataset takes ~330 MB. You can always delete and reload it later on. 
+
+* Use Compass to connect to Atlas, then explore the datasets, e.g. the shipwreck data <TODO: description schema analysis with map image, select, export code>. Compass also includes a beta version of the MongoDB Shell, an interactive JavaScript interface to MongoDB. MongoDB Shell is available as a standalone product you can run from the command line, see https://www.mongodb.com/try/download/shell
 
 # Contact
 
