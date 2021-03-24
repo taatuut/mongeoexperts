@@ -45,8 +45,6 @@ Part 6: Insert and View Data in Your Cluster. To use the code from the presentat
 
 ## Load data
 
-<TODO: describe how to use mongoimport and to add connection string>
-
 As a first test to see the output of the data creation, run the following command:
 
 `python create_grid.py`
@@ -54,6 +52,11 @@ As a first test to see the output of the data creation, run the following comman
 This prints unique 648 points in geojson format if you use the code as is. Of course you can change it to create more/less data. To use the spatial capabilities
 
 Install the MongoDB Database Tools if you have not already done so. This will add the database tools to your path so you can directly use them on the command line.
+
+To get the connection string for your cluster, go to the Clusters overview in the Atlas UI and click [ Connect ]
+
+![image](https://user-images.githubusercontent.com/2260360/112276619-3d2d9780-8c81-11eb-85b3-63d86f6baea9.png)
+
 
 Now run `python create_grid.py | mongoimport --uri mongodb+srv://<user>:<pass>@yourserver.at.mongodb.net/test --drop --collection gridder --jsonArray`
 
@@ -96,7 +99,6 @@ NOTE: this command does not use the `--drop` parameter anymore so it keeps addin
 Note: you should already have added your own Atlas connection string for Python to the `query_grid.py` script in Step 2, and running this command returns a growing result set every 30 seconds that matches the spatial filter (growing because more and more data is loaded over time) 
 
 ![image](https://user-images.githubusercontent.com/2260360/112276160-b678ba80-8c80-11eb-8af5-e0f2494144a0.png)
-
 
 4. Be happy
 
