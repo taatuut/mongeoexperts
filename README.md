@@ -8,6 +8,8 @@ You can clone/copy/use this code and play with it yourself to explore the two (2
 1. Load data into an MongoDB Atlas cluster
 2. Retrieve data using a spatial query
 
+However, since these features run on a Atlas cluster you just created yourself without much of a hassle, I believe they showcase the value of the flexible data application platform in the cloud pretty well especially since setting up databases in the cloud is still not daily practice for most people. But now you can easily do it so let's go!
+
 # Prerequisites
 
 * MongoDB Atlas account -> go to https://www.mongodb.com/cloud and click [ Try Free ] to register
@@ -103,6 +105,8 @@ You are done! You just set up an Atlas cluster in the cloud, and from the applic
 * Use Compass to connect to Atlas, then explore the datasets, e.g. the shipwreck data <TODO: description schema analysis with map image, select, export code>
 
 # Contact
+
+Feel free to contact me with any questions and remarks. Also about issues you run into and possible improvements. The usual works-on-my-machine-disclaimer: this code should run out of the box with just an Atlas connection string added, if not ping me and we'll dive into it. Of course I envourage everyone to adapt the code at their needs, change it to load real world data, and add more features! :-) 
 
 ```
 {
