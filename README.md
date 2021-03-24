@@ -37,9 +37,9 @@ Part 3: Add Your Connection IP Address to Your IP Access List. https://docs.atla
 
 Part 4: Create a Database User for Your Cluster. https://docs.atlas.mongodb.com/tutorial/create-mongodb-user-for-cluster/ NOTE: This will be your Atlas admin user 
 
-Part 5: Connect to Your Cluster. https://docs.atlas.mongodb.com/tutorial/connect-to-your-cluster/ You can copy the required connections strings to use with `mongoimport` and the Python code directly from your cluster in Atlas
+Part 5: Connect to Your Cluster. https://docs.atlas.mongodb.com/tutorial/connect-to-your-cluster/ You can copy the required connections strings to use with `mongoimport` and the Python code directly from your cluster in Atlas as explained later in this manual.
 
-Part 6: Insert and View Data in Your Cluster. To use the code from the presentation, add your connection strings to the two Python in this repository and run them. See Step 2. on how to do this. Alternatively you can look at the examples at https://docs.atlas.mongodb.com/tutorial/insert-data-into-your-cluster/   
+Part 6: Insert and View Data in Your Cluster. To use the code from the presentation, add your connection strings to the scripts in this repository and run them. See Step 2. on how to do this. Alternatively you can look at the examples at https://docs.atlas.mongodb.com/tutorial/insert-data-into-your-cluster/   
 
 2. Configure and run the example application
 
@@ -132,7 +132,7 @@ You are done! You just set up an Atlas cluster in the cloud, and from the applic
 
 ![image](https://user-images.githubusercontent.com/2260360/112274883-487fc380-8c7f-11eb-9401-88a157bb1762.png)
 
-More information on loading the data with examples on how to use it, can be found at https://docs.atlas.mongodb.com/sample-data/ NOTE: the Atlas Free Tier comes with 512 MB storage space, the sample dataset takes ~330 MB. You can always delete and reload it later on. 
+More information on loading the data with examples on how to use it, can be found at https://docs.atlas.mongodb.com/sample-data/ NOTE: the Atlas Free Tier comes with 512 MB storage space, the sample dataset takes ~330 MB. You can always delete and reload it later on. If you want to keep the data you created in this exercise or otherwise, you can use any of the database tools like `mongodump` to create a backup first.
 
 * Use Compass to connect to Atlas, then explore the datasets, e.g. the shipwreck data <TODO: description schema analysis with map image, select, export code>. Compass also includes a beta version of the MongoDB Shell, an interactive JavaScript interface to MongoDB. MongoDB Shell is available as a standalone product you can run from the command line, see https://www.mongodb.com/try/download/shell
 
