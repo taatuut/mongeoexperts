@@ -95,7 +95,8 @@ NOTE: this command does not use the `--drop` parameter anymore so it keeps addin
 
 Note: you should already have added your own Atlas connection string for Python to the `query_grid.py` script in Step 2, and running this command returns a growing result set every 30 seconds that matches the spatial filter (growing because more and more data is loaded over time) 
 
-<TODO: image VS with two terminals split>
+![image](https://user-images.githubusercontent.com/2260360/112276160-b678ba80-8c80-11eb-8af5-e0f2494144a0.png)
+
 
 4. Be happy
 
