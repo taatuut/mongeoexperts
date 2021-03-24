@@ -14,14 +14,14 @@ However, since these features run on a Atlas cluster you just created yourself w
 
 * MongoDB Atlas account -> go to https://www.mongodb.com/cloud and click [ Try Free ] to register
 * Visual Studio Code, or your favorite Python editor and a command line terminal
-* MongoDB Database tools for your operating system. https://www.mongodb.com/try/download/database-tools NOTE: you could write the data loading part in Python only, but the tool fucntionality is nice to explore too.   
+* MongoDB Database Tools for your operating system. https://www.mongodb.com/try/download/database-tools NOTE: you could do the data loading part in Python only, but the database tools functionality is interesting to explore too. We'll only cover `mongoimport` here, but there are other tools for shell access to MongoDB, backup etc. See https://docs.mongodb.com/database-tools/ for more info
 * Python 3.7 or higher with `pip` installed, preferably the latest version of Python for your operating system 
 * PyMongo driver, install running `python -m pip install pymongo[snappy,gssapi,srv,tls]` NOTE: this assumes that `python` calls your Python 3.x executable, depending on how you installed Python version(s), you might need to use `python3` or a full path
 * Module `dnspython`, install running `python -m pip install dnspython`
 
 ## Optional
 
-* MongoDB Compass <TODO: link>
+* MongoDB Compass is the GUI for MongoDB, it allows you to make smarter decisions about document structure, querying, indexing, document validation, and more. You can download the installer for the full version of MongoDB Compass, with all features and capabilities at https://www.mongodb.com/try/download/compass 
 
 # Steps
 
@@ -51,7 +51,9 @@ As a first test to see the output of the data creation, run the following comman
 
 `python create_grid.py`
 
-This prints unique 648 points in geojson format  
+This prints unique 648 points in geojson format if you use the code as is. Of course you can change it to create more/less data. To use the spatial capabilities
+
+Install the MongoDB Database Tools if you have not already done so. This will add the database tools to your path so you can directly use them on the command line.
 
 Now run `python create_grid.py | mongoimport --uri mongodb+srv://<user>:<pass>@yourserver.at.mongodb.net/test --drop --collection gridder --jsonArray`
 
@@ -101,6 +103,7 @@ You are done! You just set up an Atlas cluster in the cloud, and from the applic
 
 # Extra
 
+* Create a spatial index! We run this example without using an index. This works but if we would really have humungous loads of data an index will help to speed up queries.
 * Load the sample data
 * Use Compass to connect to Atlas, then explore the datasets, e.g. the shipwreck data <TODO: description schema analysis with map image, select, export code>
 
