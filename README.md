@@ -40,6 +40,10 @@ Part 6: Insert and View Data in Your Cluster. To use the code from the presentat
 
 2. Configure and run the example application
 
+## Load data
+
+<TODO: add connection string>
+
 As a first test to see the output of the data creation, run the following command:
 
 `python create_grid.py`
@@ -55,6 +59,30 @@ This does a one time import of the data, deleting the collection if it already e
 2021-03-24T02:12:20.567+0100    dropping: test.gridder
 2021-03-24T02:12:21.069+0100    imported 648 documents
 ```
+
+## Query data
+
+<TODO: add connection string>
+
+To see  the output for the spatial query run `python query_grid.py`
+
+This returns 3 documents after the initial data load:
+
+```
+{'_id': ObjectId('605a92c9be9b2e7d85af4848'), 'type': 'Feature', 'geometry': {'type': 'Point', 'coordinates': [0.0, 60.0]}, 'properties': {'name': 'Point340'}}
+{'_id': ObjectId('605a92c9be9b2e7d85af485d'), 'type': 'Feature', 'geometry': {'type': 'Point', 'coordinates': [10.0, 60.0]}, 'properties': {'name': 'Point358'}}
+{'_id': ObjectId('605a92c9be9b2e7d85af486c'), 'type': 'Feature', 'geometry': {'type': 'Point', 'coordinates': [20.0, 60.0]}, 'properties': {'name': 'Point376'}}
+```
+
+3. 'Automate it'
+
+To create your own two continously running 'microservices' we will run the above Python scripts in the most simple automated way.
+
+<TODO: image VS with two terminals split>
+
+4. Be happy
+
+You are done! You just set up an Atlas cluster in the cloud, and from the application code created a database with a collection holding data, with a spatial query returning the results your business needs. What more do you want to achieve in 60 minutes? Time for a cup of coffee and some fresh air.
 
 # Extra
 
