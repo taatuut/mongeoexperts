@@ -63,14 +63,14 @@ In the window that appears click [ Connect using MongoDB Compass ] as we can use
 
 Copy the connection string you see at (2), and replace `<user>:<pass>` with your own database user details. Click [ Close ] or keep the window open to also get the Python connection string that you will use to query the data. It is of course connecting you to the same cluster, with a syntax directly usable in the Python code. 
 
-Now run the following command using your own cinnection string
+Now run the following command using your own connection string
 
 `python create_grid.py | mongoimport --uri mongodb+srv://<user>:<pass>@yourserver.at.mongodb.net/test --drop --collection gridder --jsonArray`
 
-This does a one time import of the data, deleting the collection if it already existed , and returns something like:
+This does a one time data creation and import to collection `gridder` in database `test`, deleting the collection if it already existed using the `--drop` parameter, and returns something like:
 
 ```
-2021-03-24T02:12:20.493+0100    connected to: atlas-lzg21q-shard-0/yourserver-shard-00-00.at.mongodb.net:27017,yourserver-shard-00-01.at.mongodb.net:27017,yourserver-shard-00-02.at.mongodb.net:27017
+2021-03-24T02:12:20.493+0100    connected to: atlas-some-shard-0/yourserver-shard-00-00.at.mongodb.net:27017,yourserver-shard-00-01.at.mongodb.net:27017,yourserver-shard-00-02.at.mongodb.net:27017
 2021-03-24T02:12:20.567+0100    dropping: test.gridder
 2021-03-24T02:12:21.069+0100    imported 648 documents
 ```
