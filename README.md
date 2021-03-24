@@ -110,7 +110,7 @@ You are done! You just set up an Atlas cluster in the cloud, and from the applic
   "title": "Senior Solutions Architect",
   "phone": "+31 6 19929703",
   "email": "emil.zegers@mongodb.com",
-  "location": "Amsterdam, Netherlands",
+  "location": "Nijmegen, Netherlands",
   "twitter": ["@emilzegers", "@mongodb"],
   "linkedin": "https://www.linkedin.com/in/emilzegers"
 }
